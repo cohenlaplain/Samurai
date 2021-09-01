@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oll</title>
+    <button onclick="show_hide()" class="search">🔍</button>
+    <script>
+        var a;
+        function show_hide()
+        {
+            if(a==1)
+            {
+                document.getElementById("mySearch").style.display="inline";
+                return a=0,
+                document.getElementById("myMenu").style.display="inline";
+                    return a=0;
+            }
+                else
+                {
+                    document.getElementById("mySearch").style.display="none";
+                    return a=1,
+                    document.getElementById("myMenu").style.display="none";
+                    return a=1;
+                }
+        }
+    </script>
+    <style>
+        .two-dot {
+            height: 100px;
+            width: 250px;
+        }
+        .c {
+            height: 100px;
+            width: 250px;
+        }
+        .search {
+            position: absolute;
+            right: 50px;
+            top: 58px;
+            cursor: pointer;
+        }
+    </style>
+</body>
+</html>
+<input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Quick search OLL ALGS..." title="Type in a category">
+</style> 
+<ul id="myMenu">
+  <li><img src="/img/+-shapes.PNG"><a href="#">plus shape</a></li>
+  <li><img src="/img/fish3.PNG"><a href="#">FISH SHAPES</a></li>
+  <li><img src="/img/cactus.png"><a href="#">cactus</a></li>
+  <li><img src="/img/big-bolts.PNG"><a href="#">big bolts</a></li>
+  <li><img src="/img/dot.PNG"><a href="#">dot .</a></li>
+  <li><img src="/img/dotted.PNG"><a href="#">checked</a></li>
+  <li><img src="/img/H.PNG"><a href="#">H </a></li>
+  <li><img src="/img/arrow.PNG"><a href="#">arrow</a></li>
+  <li><img src="/img/I-shapes.PNG"><a href="#">I </a></li>
+  <li><img src="/img/kyte.PNG"><a href="#">Kyte</a></li>
+  <li><img src="/img/P-shapes.png"><a href="#">P </a></li>
+  <li><img src="/img/right-L-shapes.PNG"><a href="#">LL</a></li>
+  <li><img src=" /img/sighn.png "><a href="#">sign</a></li>
+  <li><img src=" /img/small L.PNG "><a href="#">l </a></li>
+  <li><img src=" /img/small-lightning.PNG "><a href="#">Z</a></li>
+  <li><img src=" /img/square.PNG "><a href="#">square</a></li>
+  <li><img src=" /img/T-shapes.PNG "><a href="#">T </a></li>
+  <li><img src=" /img/w.PNG "><a href="#">W</a></li>
+  <li><img class="c" src="/img/c.png"><a href="#">C shapes</a></li>
+  <li><img class="two-dot" src="/img/2-dot.PNG"><a href="#">..</a></li>
+</ul>
+<style>
+  #mySearch {
+    width: 300px;
+    font-size: 18px;
+    padding: 11px;
+    border: 1px solid #ddd;
+    position: absolute;
+    right: 100px;
+    top: 50px;
+  }
+  
+  /* Style the navigation menu */
+  #myMenu {
+    position: absolute;
+    right: 175px;
+    top: 100px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Style the navigation links */
+  #myMenu li a {
+    padding: 12px;
+    text-decoration: none;
+    background-color: white;
+    color: rgb(141, 141, 141);
+    display: block;
+  }
+  
+  #myMenu li a:hover {
+    color: rgb(172, 172, 172);
+    cursor: pointer;
+  }
+  </style>
+  <script>
+    function myFunction() {
+      // Declare variables
+      var input, filter, ul, li, a, i;
+      input = document.getElementById("mySearch");
+      filter = input.value.toUpperCase();
+      ul = document.getElementById("myMenu");
+      li = ul.getElementsByTagName("li");
+    
+      // Loop through all list items, and hide those who don't match the search query
+      for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = "";
+        } else {
+          li[i].style.display = "none";
+        }
+      }
+    }
+    </script>
+<style>
+    ::-webkit-scrollbar {
+        display: none;
+    }
+body {
+    color: rgb(153, 153, 153);
+    background-color: black;
+}
+span {
+    display: flex;
+    text-transform: uppercase;
+}
+img {
+    display: flex;
+}
+.back2timer {
+    position: absolute;
+    right: 50px;
+    color: rgb(197, 197, 197);
+    text-decoration: none;
+}
+.back2timer:hover {
+    color: rgb(241, 241, 241);
+}
+.f2l {
+    left: 20px;
+    position: absolute;
+}
+.f2l span {
+    display: flex;
+    text-align: left;
+    justify-content: left;
+}
+.f2l img {
+    height: 350px;
+    width: 370px;
+}
+.f2l-title {
+    font-size: 50px;
+}
+#list {
+    left: 600px;
+    position: absolute;
+}
+#list span {
+    display: flex;
+    text-align: left;
+    justify-content: left;
+}
+.list-title {
+    font-size: 50px;
+} 
+
+</style>
+<script>
+</script>
+<p class="f2l">
+    <a class="f2l-title">F2L INSERTS</a>
+    <span>step 1</span>
+    <img src="/img/f2l.png">
+    <span>step 2</span>
+    <img src="/img/f2l2.png">
+    <span>step 3</span>
+    <img src="/img/f2l3.png">
+    <span>white sticker faces up</span>
+    <img src="/img/f2l4.png">
+    <span>white sticker faces side/front </span>
+    <img src="/img/f2l45.png">
+    <span>edge in slot / corner in slot</span>
+    <img src="/img/f2l6.png">
+    <span>both pieces are in correct slot</span>
+    <img src="/img/f2l7.png">
+    <span>edge is in wrong slot / white sticker faces</span>
+    <img src="/img/f2l8.png">
+    <span>white sticker faces side/top</span>
+    <img src="/img/f2l9.png">
+    <span>corner in the right slot/left slot</span>
+    <img src="/img/f2l10.png">
+    <span>corner in the opposite slot</span>
+    <img src="/img/f2l11.png">
+    <span>corner is solved / pair in wrong slot</span>
+    <img src="/img/f2l12.png">
+    <span>flipped edge & corner in adjacent slot / other easy cases</span>
+    <img src="/img/f2l13.png">
+</p>
+<a class="back2timer" href="/rubiks-time-gh-pages/index.html">BACK TO TIMER</a>
+<p id="list">
+    <a class="list-title">OLL ALGS</a>
+    <span>PLUS SHAPES</span>
+    <img src="/img/+-shapes.PNG"> 
+    <span>FISH SHAPES</span>
+    <img src="/img/fish2.png">
+    <img src="/img/fish.PNG">
+    <span>cactus</span>
+    <img src="/img/cactus.png">
+    <span>big bolts</span>
+    <img src="/img/big-bolts.PNG">
+    <span>dot</span>
+    <img src="/img/dot.PNG">
+    <span>checked</span>
+    <img src="/img/dotted.PNG">
+    <span>H</span>
+    <img src="/img/H.PNG">
+    <span>arrow</span>
+    <img src="/img/arrow.PNG">
+    <span>I</span>
+    <img src="/img/I-shapes.PNG">
+    <span>Kyte</span>
+    <img src="/img/kyte.PNG">
+    <span>P</span>
+    <img src="/img/P-shapes.png">
+    <span>┘</span>
+    <img src="/img/right-L-shapes.PNG">
+    <span>sighn</span>
+    <img src="/img/sighn.png">
+    <span>l</span>
+    <img src="/img/small L.PNG">
+    <span>Z</span>
+    <img src="/img/small-lightning.PNG">
+    <span>❏</span>
+    <img src="/img/square.PNG">
+    <span>T</span>
+    <img src="/img/T-shapes.PNG">
+    <span>W</span>
+    <img src="/img/w.PNG">
+</p>

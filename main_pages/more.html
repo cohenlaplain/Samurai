@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>more</title>
+</head>
+<body>
+  <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+</style>
+<ul id="myMenu">
+  <li><a href="/forum/Free-Forum-Template-main/forums.html">FORUM</a></li>
+  <li><a href="/games/hextris-gh-pages/index.html">hextres</a></li>
+  <li><a href="/games/javascript-tetris-master/index.html">tetris</a></li>
+  <li><a href="/games/dodo/world.html">ice dodo</a></li>
+  <li><a href="#">custom5</a></li>
+  <li><a href="#">custom6</a></li>
+  <li><a href="#">custom7</a></li>
+  <li><a href="#">custom8</a></li>
+  <li><a href="#">custom9</a></li>
+</ul>
+    <style>
+      /* Style the search box */
+#mySearch {
+  width: 300px;
+  font-size: 18px;
+  padding: 11px;
+  border: 1px solid #ddd;
+  position: absolute;
+  left: 400px;
+  top: 50px;
+}
+
+/* Style the navigation menu */
+#myMenu {
+  position: absolute;
+  left: 400px;
+  top: 100px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  z-index: 1;
+}
+
+/* Style the navigation links */
+#myMenu li a {
+  padding: 12px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  display: block
+}
+
+#myMenu li a:hover {
+  color: rgb(172, 172, 172);
+  cursor: pointer;
+}
+</style>
+<script>
+  function myFunction() {
+    // Declare variables
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("mySearch");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myMenu");
+    li = ul.getElementsByTagName("li");
+  
+    // Loop through all list items, and hide those who don't match the search query
+    for (i = 0; i < li.length; i++) {
+      a = li[i].getElementsByTagName("a")[0];
+      if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        li[i].style.display = "";
+      } else {
+        li[i].style.display = "none";
+      }
+    }
+  }
+  </script>
+    <nav role="navigation">
+        <div id="menuToggle">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+          <ul id="menu">
+            <a href="/index.html"><li>Home</li></a>
+            <a href="hub.html"><li>hub</li></a>
+            <a href="settings.html"><li>settings</li></a>
+            <a href="/new-notepad/index.html"><li>Notepad</li></a>
+            <a href="#"><li>custom</li></a>
+          </ul>
+          <div class="more-pages">
+            <a href="/main-pages/"><li>custom</li></a>
+            <a href="#"><li>custom</li></a>
+            <a href="#"><li>custom</li></a>
+            <a href="#"><li>custom</li></a>
+            <a href="#"><li>custom</li></a>
+          </div>
+        </div>
+      </nav>
+      </div>
+<link rel="stylesheet" href="/css/icons.css">
+<link rel="stylesheet" href="/css/hamburger.css">
+<link rel="stylesheet" href="/css/style.css">
+</body>
+  </html>

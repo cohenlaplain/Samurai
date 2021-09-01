@@ -1,0 +1,190 @@
+<html>
+
+<head>
+  <title>hub</title>
+  <link rel="stylesheet" href="/css/hub.css">
+</head>
+
+<body>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <!-- Demo styles -->
+  <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    body {
+      background: rgb(0, 0, 0);
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: rgb(255, 255, 255);
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper-container {
+      width: 200%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .swiper-container {
+      background: black;
+      background-size: 400px;
+      background-position: none;
+      background-repeat: no-repeat;
+      right: 1px;
+      width: 100%;
+      height: 100%;
+      margin: 20px auto;
+    }
+
+    .append-buttons {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .swiper-slide {
+      cursor: pointer;
+      text-decoration: none;
+      color: rgb(37, 37, 37);
+    }
+
+    .swiper-slide {
+      font-family: aquire;
+      position: relative;
+      margin: 300px auto 0;
+      width: 500px;
+      height: 250px;
+      background: linear-gradient(0deg, #000, #272727);
+    }
+
+    .swiper-slide:before,
+    .swiper-slide:after {
+      content: '';
+      position: absolute;
+      left: -2px;
+      top: -2px;
+      background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094,
+          #0000ff, #00ff00, #ffff00, #ff0000);
+      background-size: 400%;
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      z-index: -1;
+      animation: steam 20s linear infinite;
+    }
+
+    @keyframes steam {
+      0% {
+        background-position: 0 0;
+      }
+
+      50% {
+        background-position: 400% 0;
+      }
+
+      100% {
+        background-position: 0 0;
+      }
+    }
+
+    .swiper-slide:after {
+      filter: blur(50px);
+    }
+
+    .swiper-slide:hover {
+      color: rgb(84, 84, 84);
+    }
+  </style>
+  </head>
+
+  <body>
+    <div #swiperRef="" class="swiper-container mySwiper">
+      <div class="swiper-wrapper">
+        <a class="swiper-slide" href="/index.html">home</a>
+        <a class="swiper-slide" href="more.html">more</a>
+        <a class="swiper-slide" href="settings.html">settings</a>
+        <a class="swiper-slide" href="/new-notepad/index.html">Notepad</a>
+        <a class="swiper-slide" href="/rubiks-time-gh-pages/index.html">cube timer</a>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        centeredSlides: true,
+        spaceBetween: 30,
+      });
+      var appendNumber = 4;
+      var prependNumber = 1;
+      document
+        .querySelector(".prepend-2-slides")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+          swiper.prependSlide([
+            '<div class="swiper-slide">Slide ' + --prependNumber + "</div>",
+            '<div class="swiper-slide">Slide ' + --prependNumber + "</div>",
+          ]);
+        });
+      document
+        .querySelector(".prepend-slide")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+          swiper.prependSlide(
+            '<div class="swiper-slide">Slide ' + --prependNumber + "</div>"
+          );
+        });
+      document
+        .querySelector(".append-slide")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+          swiper.appendSlide(
+            '<div class="swiper-slide">Slide ' + ++appendNumber + "</div>"
+          );
+        });
+      document
+        .querySelector(".append-2-slides")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+          swiper.appendSlide([
+            '<div class="swiper-slide">Slide ' + ++appendNumber + "</div>",
+            '<div class="swiper-slide">Slide ' + ++appendNumber + "</div>",
+          ]);
+        });
+    </script>
+    </div>
+  </body>
+
+</html>
